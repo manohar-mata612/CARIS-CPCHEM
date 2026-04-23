@@ -1,0 +1,128 @@
+CEDAR BAYOU ETHYLENE CRACKER — MAINTENANCE MANUAL
+Equipment: Charge Gas Compressor (CGC)
+Tag: CB-CGC-001 / CB-CGC-002
+Revision: 4.2 | Plant: Cedar Bayou, Baytown TX
+Operator: Chevron Phillips Chemical Company (CPChem)
+
+=======================================================
+SECTION 1: EQUIPMENT OVERVIEW
+=======================================================
+The Charge Gas Compressor (CGC) is the most critical rotating
+equipment in the ethylene cracker. It compresses cracked gas
+from the cracking furnaces to high pressure for downstream
+separation. Any unplanned CGC shutdown stops ethylene production
+entirely, causing losses of $180,000 per hour.
+
+The CGC is a multi-stage centrifugal compressor driven by a
+steam turbine. It operates at 8,500 RPM at full load with
+inlet suction pressure of 0.8 bar and discharge pressure of
+38 bar. Bearing temperature normal operating range is 70-90°C.
+Vibration normal operating range is 0.5-2.5 mm/s RMS.
+
+=======================================================
+SECTION 2: BEARING FAULT DIAGNOSIS
+=======================================================
+
+2.1 INNER RACE FAULT (Failure Code: MECH-BRG-IR)
+---------------------------------------------------
+Symptoms:
+  - Vibration RMS rises above 4.0 mm/s
+  - Kurtosis value exceeds 8.0 (normal baseline: 2.5-3.5)
+  - High-frequency impulses at bearing pass frequency (BPFI)
+  - Peak vibration exceeds 12.0 mm/s
+  - Crest factor above 6.0
+
+Cause: Spalling or pitting on inner bearing race due to
+contaminated lubrication, overloading, or fatigue.
+
+Detection timeline: Inner race faults are detectable via
+vibration analysis 48-96 hours before catastrophic failure.
+
+Recommended action:
+  P1 (kurtosis > 15, RMS > 6.0): Immediate controlled shutdown.
+     Schedule emergency bearing replacement within 4 hours.
+  P2 (kurtosis 8-15, RMS 4-6):   Plan bearing inspection within
+     24 hours. Order replacement bearings SKF 6314/C3.
+  P3 (kurtosis 5-8, RMS 2.5-4):  Increase monitoring frequency
+     to every 4 hours. Schedule inspection at next opportunity.
+
+Parts required: SKF 6314/C3 deep groove ball bearing x2
+Estimated labor: 8 hours (2 technicians)
+Safety: Isolate steam turbine, lock out tag out per SOP-CGC-004
+
+2.2 OUTER RACE FAULT (Failure Code: MECH-BRG-OR)
+---------------------------------------------------
+Symptoms:
+  - Vibration RMS rises above 3.5 mm/s
+  - Kurtosis value exceeds 7.0
+  - Bearing pass frequency outer race (BPFO) visible in spectrum
+  - Crest factor above 5.5
+  - Increased bearing temperature: 95-110°C
+
+Cause: Contamination ingress, water in oil, electrical erosion,
+or static overloading during installation.
+
+Detection timeline: Outer race faults progress faster than inner
+race faults. Detectable 24-72 hours before failure.
+
+Recommended action:
+  P1 (kurtosis > 12, RMS > 5.5): Immediate shutdown.
+  P2 (kurtosis 7-12, RMS 3.5-5.5): Schedule within 12 hours.
+  P3 (kurtosis 4-7, RMS 2.5-3.5): Monitor closely every 2 hours.
+
+Parts required: SKF NU314 ECP cylindrical roller bearing x2
+Estimated labor: 10 hours (2 technicians)
+
+2.3 ROLLING ELEMENT (BALL) FAULT (Failure Code: MECH-BRG-RE)
+--------------------------------------------------------------
+Symptoms:
+  - Vibration RMS rises above 3.0 mm/s
+  - Kurtosis value exceeds 6.0
+  - Ball pass frequency (BSF) sidebands visible
+  - Crest factor above 5.0
+
+Cause: Ball surface fatigue, inadequate lubrication,
+manufacturing defects, or contamination.
+
+Detection timeline: 36-84 hours before failure.
+
+Recommended action:
+  P1 (kurtosis > 10, RMS > 5.0): Immediate shutdown.
+  P2 (kurtosis 6-10, RMS 3.0-5.0): Schedule within 24 hours.
+  P3 (kurtosis 4-6, RMS 2.0-3.0): Monitor every 6 hours.
+
+Parts required: SKF 6314/C3 x2, lubrication kit
+Estimated labor: 6 hours
+
+=======================================================
+SECTION 3: LUBRICATION REQUIREMENTS
+=======================================================
+Lubricant: Mobil DTE Oil Heavy (ISO VG 100)
+Change interval: Every 4,000 operating hours or 6 months
+Oil temperature normal range: 45-65°C
+Oil pressure normal range: 1.5-2.5 bar
+Low oil pressure alarm: < 1.2 bar (P2 alert)
+High oil temperature alarm: > 75°C (P2 alert)
+
+=======================================================
+SECTION 4: VIBRATION MONITORING THRESHOLDS
+=======================================================
+Parameter        | Normal      | Warning     | Critical
+-----------------|-------------|-------------|----------
+RMS (mm/s)       | 0.5 - 2.5  | 2.5 - 5.0  | > 5.0
+Peak (mm/s)      | 1.5 - 8.0  | 8.0 - 15.0 | > 15.0
+Kurtosis         | 2.5 - 3.5  | 3.5 - 8.0  | > 8.0
+Crest Factor     | 2.5 - 4.0  | 4.0 - 6.0  | > 6.0
+Bearing Temp (C) | 70 - 90    | 90 - 110   | > 110
+
+=======================================================
+SECTION 5: EMERGENCY SHUTDOWN PROCEDURE
+=======================================================
+1. Alert control room operator immediately
+2. Reduce feed to cracking furnaces to minimum
+3. Initiate controlled CGC speed reduction
+4. Activate spare CGC-002 if available
+5. Isolate steam supply to turbine
+6. Apply LOTO per SOP-CGC-004
+7. Notify maintenance supervisor and reliability engineer
+8. Document all readings at time of shutdown

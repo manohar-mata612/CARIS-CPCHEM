@@ -1,0 +1,125 @@
+CEDAR BAYOU PLANT — HISTORICAL FAILURE INCIDENT REPORTS
+Equipment: Rotating Equipment (Compressors, Pumps, Fans)
+Source: SAP PM Maintenance History | 2018-2024
+
+=======================================================
+INCIDENT: INC-2019-0342
+=======================================================
+Date: March 14, 2019
+Equipment: CB-CGC-001 (Charge Gas Compressor 1)
+Failure Code: MECH-BRG-IR (Inner Race Fault)
+Downtime: 52 hours
+Production Loss: $9.36M (52hrs x $180K/hr)
+
+Pre-failure vibration readings (48 hours before failure):
+  RMS:          4.8 mm/s  (threshold: 2.5)
+  Peak:         16.2 mm/s (threshold: 8.0)
+  Kurtosis:     11.3      (threshold: 3.5)
+  Crest Factor: 6.8       (threshold: 4.0)
+
+Root Cause: Contaminated lubrication oil. Water ingress
+through deteriorated shaft seal allowed moisture into the
+bearing housing, accelerating fatigue on inner race.
+
+Corrective Actions:
+  1. Replaced SKF 6314/C3 bearings (drive and non-drive end)
+  2. Replaced shaft seal assembly
+  3. Flushed and replaced lubrication oil (Mobil DTE Heavy)
+  4. Installed oil moisture sensor
+  5. Increased vibration monitoring frequency to daily
+
+Lesson Learned: Kurtosis exceeded 8.0 threshold 72 hours
+before failure. Earlier intervention at P2 level would have
+prevented unplanned shutdown and reduced loss to ~$500K
+(planned 4-hour bearing replacement during low production).
+
+=======================================================
+INCIDENT: INC-2021-0187
+=======================================================
+Date: July 8, 2021
+Equipment: CB-QWP-001 (Quench Water Pump 1)
+Failure Code: MECH-BRG-OR (Outer Race Fault)
+Downtime: 18 hours
+Production Loss: $3.24M
+
+Pre-failure sensor readings (36 hours before failure):
+  RMS:          5.2 mm/s
+  Peak:         19.8 mm/s
+  Kurtosis:     13.7
+  Crest Factor: 7.6
+  Bearing Temp: 108°C (normal: 70-85°C)
+
+Root Cause: Static overloading during pump restart after
+planned turnaround. Bearing installed with incorrect preload.
+
+Corrective Actions:
+  1. Replaced SKF NU314 ECP cylindrical roller bearings
+  2. Updated installation procedure for preload specification
+  3. Added mandatory vibration baseline check post-installation
+
+=======================================================
+INCIDENT: INC-2022-0445
+=======================================================
+Date: November 22, 2022
+Equipment: CB-CGC-002 (Charge Gas Compressor 2)
+Failure Code: MECH-BRG-RE (Rolling Element Fault)
+Downtime: 31 hours
+Production Loss: $5.58M
+
+Pre-failure sensor readings (60 hours before failure):
+  RMS:          3.9 mm/s
+  Peak:         13.1 mm/s
+  Kurtosis:     8.4
+  Crest Factor: 5.6
+
+Root Cause: Inadequate lubrication. Oil change interval
+exceeded by 800 hours due to scheduling conflict during
+turnaround. Oil viscosity degraded causing metal-to-metal
+contact on rolling elements.
+
+Corrective Actions:
+  1. Replaced all bearings on CGC-002
+  2. Implemented automated oil change scheduling in SAP PM
+  3. Added oil viscosity sensor to continuous monitoring
+
+=======================================================
+INCIDENT: INC-2023-0091
+=======================================================
+Date: February 3, 2023
+Equipment: CB-FDF-001 (Feed Furnace Fan 1)
+Failure Code: MECH-BRG-IR
+Downtime: 9 hours
+Production Loss: $1.62M
+
+Pre-failure sensor readings (84 hours before failure):
+  RMS:          3.1 mm/s
+  Kurtosis:     6.2
+  Crest Factor: 5.1
+
+Note: This incident was PARTIALLY PREVENTED. Vibration
+monitoring caught the fault at P3 level (84hrs early).
+Planned replacement was scheduled but could not be executed
+before P1 threshold was reached due to parts availability.
+
+Lesson Learned: Parts pre-positioning (SKF 6314/C3 bearings)
+must be maintained on-site for all critical rotating equipment.
+If parts had been available, downtime would have been 4 hours
+instead of 9 hours, saving $900K.
+
+=======================================================
+PATTERN ANALYSIS — ALL INCIDENTS 2018-2024
+=======================================================
+Total incidents analyzed: 23
+Average pre-failure detection window: 58 hours
+Average production loss per incident: $4.2M
+Total 6-year production loss: $96.6M
+
+Fault type distribution:
+  Inner race (MECH-BRG-IR): 52% of incidents
+  Outer race (MECH-BRG-OR): 26% of incidents
+  Rolling element (MECH-BRG-RE): 22% of incidents
+
+Key finding: In 19 of 23 incidents (83%), kurtosis exceeded
+the warning threshold (3.5) more than 48 hours before failure.
+An automated early detection system acting at P3 level could
+have prevented 15 of 23 incidents (65%), saving $62.4M.

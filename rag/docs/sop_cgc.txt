@@ -1,0 +1,107 @@
+STANDARD OPERATING PROCEDURE — CHARGE GAS COMPRESSOR
+SOP Number: SOP-CGC-004
+Equipment: CB-CGC-001, CB-CGC-002
+Revision: 3.1 | Approved: Plant Manager, Cedar Bayou
+
+=======================================================
+1. PURPOSE
+=======================================================
+This SOP defines the operating, monitoring, and response
+procedures for the Charge Gas Compressor (CGC) at Cedar
+Bayou ethylene cracker. The CGC is a Safety Critical
+Equipment (SCE) item. Deviations from normal operating
+parameters must be reported immediately to the shift
+supervisor and reliability engineer.
+
+=======================================================
+2. NORMAL OPERATING PARAMETERS
+=======================================================
+Speed:              8,200 - 8,800 RPM
+Suction pressure:   0.7 - 0.9 bar
+Discharge pressure: 36 - 40 bar
+Vibration (RMS):    0.5 - 2.5 mm/s
+Bearing temperature: 70 - 90°C
+Seal gas pressure:  3.5 - 4.5 bar
+Oil pressure:       1.5 - 2.5 bar
+
+=======================================================
+3. ALARM RESPONSE PROCEDURES
+=======================================================
+
+3.1 VIBRATION HIGH ALARM (RMS > 2.5 mm/s)
+  Immediate actions:
+    a) Notify shift supervisor within 5 minutes
+    b) Notify reliability engineer within 15 minutes
+    c) Begin manual vibration log every 30 minutes
+    d) Check oil pressure and temperature
+    e) Review recent maintenance history in SAP PM
+  Do NOT reduce load unless directed by supervisor.
+
+3.2 VIBRATION HIGH-HIGH ALARM (RMS > 5.0 mm/s)
+  Immediate actions:
+    a) Notify shift supervisor IMMEDIATELY
+    b) Initiate controlled load reduction
+    c) Prepare to activate standby CGC-002
+    d) Contact maintenance for emergency bearing inspection
+    e) If RMS exceeds 7.0 mm/s: initiate emergency shutdown
+
+3.3 BEARING TEMPERATURE HIGH ALARM (> 95°C)
+  Immediate actions:
+    a) Check oil supply pressure and flow
+    b) Check cooling water flow to oil cooler
+    c) Notify reliability engineer within 10 minutes
+    d) If temperature reaches 110°C: shutdown compressor
+
+3.4 KURTOSIS ALARM (> 8.0, if monitored online)
+  This indicates bearing impulse fault. Even if RMS is
+  within normal range, kurtosis above 8.0 is a serious
+  early warning indicator.
+    a) Notify reliability engineer immediately
+    b) Schedule bearing inspection within 24 hours
+    c) Increase vibration monitoring to every 2 hours
+    d) Pre-order replacement bearings
+
+=======================================================
+4. LOCKOUT TAGOUT (LOTO) PROCEDURE
+=======================================================
+Before any maintenance on CGC:
+  1. Reduce compressor speed to minimum
+  2. Close inlet and outlet block valves
+  3. Depressurize compressor casing via vent valve
+  4. Close steam supply to turbine, apply blind flange
+  5. Apply lock to steam turbine trip valve
+  6. Verify zero energy state with voltage tester
+  7. Apply personal lock and tag — EVERY technician
+  8. Verify isolation with operations supervisor
+  9. Complete PTW (Permit to Work) form
+
+=======================================================
+5. BEARING REPLACEMENT PROCEDURE
+=======================================================
+Estimated time: 6-10 hours (2 qualified technicians)
+
+Pre-work:
+  - Confirm parts available: SKF 6314/C3 (x2 minimum)
+  - Confirm oil supply (Mobil DTE Heavy, 20L minimum)
+  - Complete LOTO per Section 4
+  - Obtain hot work permit if required
+
+Procedure:
+  1. Drain bearing housing oil
+  2. Remove bearing housing cover
+  3. Record pre-removal vibration data and bearing condition
+  4. Remove old bearing (use bearing puller, do not hammer)
+  5. Clean bearing housing thoroughly
+  6. Inspect shaft journal for wear or damage
+  7. Install new bearing (use induction heater, 110°C max)
+  8. Verify bearing clearance within specification
+  9. Reinstall housing cover, torque to 85 Nm
+  10. Refill with fresh oil to correct level
+  11. Remove LOTO, restart per startup SOP-CGC-001
+  12. Take vibration baseline reading within 1 hour of restart
+  13. Record all work in SAP PM work order
+
+Post-maintenance verification:
+  RMS must be < 1.5 mm/s within 2 hours of restart.
+  Kurtosis must be < 3.5 within 2 hours of restart.
+  If values exceed these: shut down and reinspect.

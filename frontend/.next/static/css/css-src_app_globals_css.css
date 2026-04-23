@@ -1,0 +1,43 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/globals.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --frame-indigo:       #2D2B6B;
+  --frame-indigo-light: #3D3B8E;
+  --frame-indigo-dark:  #1E1C4E;
+  --frame-teal:         #00C2CB;
+  --frame-teal-dim:     rgba(0,194,203,0.15);
+  --bg-base:    #0F0E1A;
+  --bg-card:    #1A1933;
+  --bg-card-2:  #201E3A;
+  --bg-border:  rgba(45,43,107,0.5);
+  --bg-hover:   rgba(45,43,107,0.2);
+  --status-normal:   #22C55E;
+  --status-warning:  #F59E0B;
+  --status-critical: #EF4444;
+  --text-primary:   #F0F0F5;
+  --text-secondary: #9896B8;
+  --text-muted:     #5C5A80;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.6;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--frame-indigo); border-radius: 2px; }
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.4; } }
+

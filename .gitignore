@@ -1,0 +1,10 @@
+.env
+data/raw/
+data/processed/
+ml/saved_models/
+chroma_db/
+mlruns/
+api/caris_db.json
+venv/
+__pycache__/
+frontend/node_modules/

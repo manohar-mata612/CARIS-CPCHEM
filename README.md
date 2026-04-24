@@ -275,18 +275,3 @@ For safety-critical OT environments, predictability beats flexibility. A hardcod
 
 Full interactive docs: `http://localhost:8000/docs`
 
----
-
-## About
-
-Built as a production-ready demonstration of the exact AI architecture deployed by **Frame Data AI** for Gulf Coast energy operators. CPChem Cedar Bayou was selected as the target client based on public disclosures confirming predictive maintenance as their next funded digital initiative.
-
-**Author:** Manohar Mata  
-**Stack:** Python · LangGraph · Nvidia NIM · FastAPI · Next.js · GCP  
-**Role target:** Full Stack AI Engineer — Frame Data AI, Houston TX
-
----
-
-<div align="center">
-<sub>Built with Frame Data AI architecture patterns for CPChem Cedar Bayou, Baytown TX</sub>
-</div>

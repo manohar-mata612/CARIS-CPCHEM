@@ -3,8 +3,8 @@
 # CARIS
 ### Cedar Bayou Agentic Reliability Intelligence System
 
-**Built for Chevron Phillips Chemical (CPChem) — Cedar Bayou Plant, Baytown TX**  
-**Powered by Frame Data AI architecture patterns**
+**Built for Chevron Phillips Chemical (CPChem) demo — Cedar Bayou Plant, Baytown TX**  
+
 
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
@@ -61,7 +61,7 @@ Sensor Stream (CWRU / OSIsoft PI)
           │
           ▼
 ┌─────────────────────────────────────────────────────┐
-│          Next.js Dashboard (Frame Data AI styling)   │
+│          Next.js Dashboard    │
 │   Sensor Heatmap │ Alert Feed │ Work Orders │ Logs   │
 └─────────────────────────────────────────────────────┘
 ```
@@ -79,7 +79,7 @@ Sensor Stream (CWRU / OSIsoft PI)
 | Anomaly Detection | Isolation Forest + Z-score | Unsupervised, trains on normal data only |
 | Experiment Tracking | MLflow | Tracks all training runs, reproducible results |
 | Backend | FastAPI + Strawberry GraphQL | Async, auto-docs, JWT auth |
-| Frontend | Next.js + Recharts | Real-time polling, Frame Data AI design system |
+| Frontend | Next.js + Recharts |  polling |
 | Database | TinyDB → Firestore (GCP) | Zero setup locally, swappable for production |
 | Data | CWRU Bearing Dataset | Real vibration data with bearing fault signatures |
 | Deployment | GCP Cloud Run + Firebase | Free tier, production-grade |
@@ -125,7 +125,7 @@ caris-cpchem/
 ├── frontend/              # Next.js dashboard
 │   └── src/
 │       ├── app/
-│       │   ├── page.tsx   # Main dashboard (Frame Data AI styling)
+│       │   ├── page.tsx   # Main dashboard 
 │       │   └── globals.css # Design tokens
 │       └── hooks/
 │           └── useAPI.ts  # FastAPI communication

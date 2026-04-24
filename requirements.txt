@@ -1,22 +1,35 @@
+# Data processing
 scipy==1.13.0
 pandas==2.2.2
 numpy==1.26.4
 scikit-learn==1.5.0
+
+# Environment
 python-dotenv==1.0.1
-pytest==8.2.0
-matplotlib==3.9.0
-mlflow 
-scikit-learn
-langchain 
-langchain-community 
-langchain-google-genai 
-chromadb 
-google-generativeai 
-pypdf
-langchain-nvidia-ai-endpoints
+
+# ML tracking
+mlflow
+
+# LangChain + RAG
+langchain
+langchain-community
 langchain-core
-fastapi 
-uvicorn 
-strawberry-graphql 
-python-jose[cryptography] 
+langchain-nvidia-ai-endpoints
+langchain-google-genai
+chromadb
+google-generativeai
+pypdf
+
+# API
+fastapi
+uvicorn[standard]
+strawberry-graphql
+python-jose[cryptography]
+
+# Database
 tinydb
+google-cloud-firestore
+google-cloud-storage
+
+# HTTP client (for sensor streamer)
+requests

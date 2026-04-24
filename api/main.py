@@ -23,6 +23,7 @@ Run:
   uvicorn api.main:app --reload --port 8000
 """
 
+from contextlib import asynccontextmanager
 import os
 import sys
 from datetime import datetime, timezone
@@ -38,9 +39,15 @@ from api.database import (save_sensor_reading, save_alert, save_work_order,
                            save_agent_log, get_alerts, get_work_orders,
                            get_agent_logs, get_sensor_readings,
                            acknowledge_work_order)
+@asynccontextmanager
+async def lifespan(app):
+    from api.startup import download_from_gcs
+    download_from_gcs()
+    yield
 
 app = FastAPI(
     title="CARIS API",
+    lifespan=lifespan,
     description="Cedar Bayou Agentic Reliability Intelligence System — CPChem",
     version="1.0.0",
 )
@@ -49,7 +56,9 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000", "http://localhost:3001",
-                   "https://*.web.app", "https://*.firebaseapp.com"],
+                     "https://revenue-intelligence-app.web.app",
+    "https://revenue-intelligence-app.firebaseapp.com",
+    "https://caris-api-430431660680.us-central1.run.app",],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -118,6 +127,20 @@ def login(request: LoginRequest):
 # ─────────────────────────────────────────
 # Core sensor endpoint — triggers agents
 # ─────────────────────────────────────────
+
+@app.post("/api/sensor-reading-public", tags=["scheduler"])
+async def ingest_sensor_reading_public(
+    reading: SensorReading,
+    background_tasks: BackgroundTasks,
+):
+    """Public endpoint for Cloud Scheduler — no JWT required."""
+    reading_dict = reading.model_dump()
+    reading_dict["timestamp"] = reading_dict.get("timestamp") or \
+                                 datetime.now(timezone.utc).isoformat()
+    reading_dict["submitted_by"] = "cloud_scheduler"
+    save_sensor_reading(reading_dict)
+    background_tasks.add_task(_run_agents, reading_dict)
+    return {"status": "accepted", "source": "scheduler"}
 
 @app.post("/api/sensor-reading", tags=["agents"])
 async def ingest_sensor_reading(
